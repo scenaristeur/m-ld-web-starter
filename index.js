@@ -12,7 +12,7 @@ app.get(staticFiles, (req, res) => {
 
 // Create and run an HTTP server for Express and Socket.io
 const httpServer = require('http').createServer(app);
-httpServer.listen(0, () => {
+httpServer.listen(3000, () => {
   console.log(`Example app listening at http://localhost:${httpServer.address().port}`);
 });
 

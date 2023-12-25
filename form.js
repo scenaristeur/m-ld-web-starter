@@ -24,11 +24,12 @@ class FormController {
       // Unique clone identifier
       '@id': uuid(),
       // The m-ld domain name (must conform to an IETF domain name)
-      '@domain': `${formId}.web-starter.m-ld.org`,
+      '@domain': `${formId}.m-ld.glitch.me`,
       // The 'genesis' is given to us via the server, and indicates whether this domain is brand-new
-      genesis: getCookie('is-genesis') === 'true',
+      //genesis: getCookie('is-genesis') === 'true',
       // Change this flag to reduce console logging by m-ld
-      logLevel: 'debug'
+      logLevel: 'debug',
+      io: {uri: `https://m-ld.glitch.me`}
     }).then(async meld => {
       // We call the clone 'meld'
       this.meld = meld;
