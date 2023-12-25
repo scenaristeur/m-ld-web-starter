@@ -1,3 +1,6 @@
+const host = process.env.HOST || "localhost";
+const port = process.env.PORT || 1883;
+
 const express = require('express');
 const socket = require('socket.io');
 const { join } = require('path');
@@ -12,12 +15,16 @@ app.get(staticFiles, (req, res) => {
 
 // Create and run an HTTP server for Express and Socket.io
 const httpServer = require('http').createServer(app);
-httpServer.listen(3000, () => {
+httpServer.listen(port, () => {
   console.log(`Example app listening at http://localhost:${httpServer.address().port}`);
 });
 
 // Start the Socket.io server, and attach the m-ld message-passing service
-const io = new socket.Server(httpServer);
+const io = new socket.Server(httpServer, {
+    cors: {
+        origin: '*',
+    },
+});
 new IoRemotesService(io.sockets)
   // The m-ld service provides some debugging information
   .on('error', console.error)

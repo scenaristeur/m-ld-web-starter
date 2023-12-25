@@ -3,6 +3,12 @@
   "version": "0.2.0",
   "description": "Starter project for web applications using m-ld and Javascript",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "16.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m-ld/m-ld-web-starter.git"
@@ -14,8 +20,9 @@
   },
   "homepage": "https://github.com/m-ld/m-ld-web-starter#readme",
   "dependencies": {
-    "@m-ld/m-ld": "^0.10.0-edge.1",
-    "express": "^4.17.1",
-    "socket.io": "^4.1.2"
+    "@m-ld/m-ld": "^0.10.0",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "memory-level": "^1.0.0"
   }
 }

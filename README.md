@@ -2,6 +2,14 @@
 
 # m-ld-web-starter
 
+
+refactor to run on glitch
+
+https://github.com/scenaristeur/m-ld-web-starter/tree/edge
+
+https://glitch.com/edit/#!/m-ld
+
+
 > ⚠️ This project has been abandoned, because the code was not well related to how web apps are really built. We are working on a successor, the [Collaborative TodoMVC App](https://github.com/m-ld/m-ld-todomvc-vanillajs), please check it out!
 
 This app demonstrates using **m-ld** to enable collaborative form-filling in a

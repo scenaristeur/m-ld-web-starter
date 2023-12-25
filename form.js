@@ -26,7 +26,7 @@ class FormController {
       // The m-ld domain name (must conform to an IETF domain name)
       '@domain': `${formId}.m-ld.glitch.me`,
       // The 'genesis' is given to us via the server, and indicates whether this domain is brand-new
-      //genesis: getCookie('is-genesis') === 'true',
+      genesis: getCookie('is-genesis') === 'true',
       // Change this flag to reduce console logging by m-ld
       logLevel: 'debug',
       io: {uri: `https://m-ld.glitch.me`}
