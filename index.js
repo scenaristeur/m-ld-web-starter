@@ -1,5 +1,5 @@
 const host = process.env.HOST || "localhost";
-const port = process.env.PORT || 1883;
+const port = process.env.PORT || 3000;
 
 const express = require('express');
 const socket = require('socket.io');
